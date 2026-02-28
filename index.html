@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO META DATA -->
+    <!--
+    Meta Title: Walk-In Barber Pflugerville, TX | Same Day Haircut | Bigger Than Business
+    Meta Description: Need a haircut today? Bigger Than Business in Pflugerville, TX welcomes walk-ins. 8 chairs, professional barbers, 4.9 rating. Visit us for same-day haircuts, fades, and beard trims.
+    Keywords: walk-in barber Pflugerville, barber open now Pflugerville, haircut today Pflugerville, same day haircut Pflugerville
+    URL Slug: /walk-in-barber-pflugerville
+    -->
+
+    <title>Walk-In Barber Pflugerville, TX | Same Day Haircut | Bigger Than Business</title>
+    <meta name="description" content="Need a haircut today? Bigger Than Business in Pflugerville, TX welcomes walk-ins. 8 chairs, professional barbers, 4.9 rating. Visit us for same-day haircuts, fades, and beard trims.">
+    <meta name="keywords" content="walk-in barber Pflugerville, barber open now Pflugerville, haircut today Pflugerville, same day haircut Pflugerville">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --accent: #00FF00;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        /* UTILITIES */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        /* NAVIGATION */
+        nav {
+            border-bottom: 4px solid var(--black);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .nav-cta {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: 3px solid var(--black);
+            transition: all 0.1s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid var(--black);
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 12vw, 140px);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin-bottom: 20px;
+        }
+
+        .hero-location {
+            font-size: clamp(24px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .hero-sub {
+            font-size: clamp(16px, 2vw, 20px);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 20px 48px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 900;
+            border: 4px solid var(--black);
+            transition: all 0.1s ease;
+        }
+
+        .hero-cta:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-it-works {
+            border-bottom: 4px solid var(--black);
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 6vw, 72px);
+            font-weight: 900;
+            margin-bottom: 50px;
+            letter-spacing: -2px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0;
+            border: 3px solid var(--black);
+        }
+
+        .step {
+            padding: 40px;
+            border-right: 3px solid var(--black);
+        }
+
+        .step:last-child {
+            border-right: none;
+        }
+
+        .step-number {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .step-text {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            border-bottom: 4px solid var(--black);
+            padding: 80px 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border: 3px solid var(--black);
+        }
+
+        .service-item {
+            padding: 50px 30px;
+            border-right: 3px solid var(--black);
+            text-align: center;
+        }
+
+        .service-item:last-child {
+            border-right: none;
+        }
+
+        .service-name {
+            font-size: clamp(20px, 3vw, 32px);
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* STATS SECTION */
+        .stats {
+            border-bottom: 4px solid var(--black);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .stat {
+            padding: 80px 40px;
+            border-right: 3px solid var(--black);
+            text-align: center;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: clamp(48px, 8vw, 120px);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: -3px;
+        }
+
+        .stat-label {
+            font-size: clamp(14px, 2vw, 20px);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* FINAL CTA SECTION */
+        .final-cta {
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--black);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(36px, 7vw, 80px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .final-cta p {
+            font-size: clamp(16px, 2.5vw, 22px);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .final-cta-btn {
+            display: inline-block;
+            padding: 24px 60px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 900;
+            border: 4px solid var(--black);
+            transition: all 0.1s ease;
+        }
+
+        .final-cta-btn:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .footer-link {
+            color: var(--black);
+            text-decoration: none;
+            border-bottom: 2px solid var(--black);
+        }
+
+        .footer-link:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                border-right: none;
+                border-bottom: 3px solid var(--black);
+            }
+
+            .step:last-child {
+                border-bottom: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-item {
+                border-right: none;
+                border-bottom: 3px solid var(--black);
+            }
+
+            .service-item:last-child {
+                border-bottom: none;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 3px solid var(--black);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-inner">
+            <!-- Alt text suggestion: Bigger Than Business Logo - Heraldic BTB shield emblem with wings and crown -->
+            <img src="https://maas-log-prod.cn-wlcb.ufileos.com/anthropic/27d36c15-bce4-4c15-aeda-c9b9200662c8/b447f3003e20eda66d51862a9a9bf48b.png?UCloudPublicKey=TOKEN_e15ba47a-d098-4fbd-9afc-a0dcf0e4e621&Expires=1772321419&Signature=iNlvUwBiOOm/tjmRGB9FiwvQ1go=" alt="Bigger Than Business Logo" class="logo">
+            <a href="https://www.biggerthan-business.com/" class="nav-cta uppercase">Book Now!</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="uppercase">Walk-In Barber<br>Pflugerville</h1>
+            <p class="hero-location uppercase">Pflugerville, Texas</p>
+            <p class="hero-sub">Need a haircut today? We welcome walk-ins when availability opens across our eight chairs. No appointment. No waiting. Just cuts.</p>
+            <a href="https://www.biggerthan-business.com/" class="hero-cta uppercase">Book Now!</a>
+        </div>
+    </section>
+
+    <!-- HOW WALK-INS WORK -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title uppercase">How Walk-Ins Work</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <p class="step-text">Appointments are prioritized. Book ahead for guaranteed time slots.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <p class="step-text">Walk-ins accepted when chairs open. First come, first served.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <p class="step-text">Call ahead for fastest service. We'll tell you wait times in Pflugerville.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES AVAILABLE TODAY -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title uppercase">Available Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3 class="service-name uppercase">Men's Haircuts</h3>
+                    <p class="service-desc">Precision cuts for every style. Classic to modern.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-name uppercase">Fades</h3>
+                    <p class="service-desc">Skin fades, taper fades, and everything between.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-name uppercase">Beard Trims</h3>
+                    <p class="service-desc">Shape-ups and line-ups. Sharp edges every time.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="service-name uppercase">Kids Cuts</h3>
+                    <p class="service-desc">Young cuts. Fast. Clean. Kid-friendly barbers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY BIGGER THAN BUSINESS -->
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-number">4.9</div>
+            <div class="stat-label">Rating</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Chairs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">PRO</div>
+            <div class="stat-label">Barbers</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">FAST</div>
+            <div class="stat-label">Results</div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="uppercase">Stop Scrolling.<br>Get Your Cut Today.</h2>
+            <p>Visit Bigger Than Business in Pflugerville for a professional same-day haircut. Eight chairs. Professional barbers. No excuses.</p>
+            <a href="https://www.biggerthan-business.com/" class="final-cta-btn uppercase">Book Now!</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-text uppercase">© 2025 Bigger Than Business | <a href="https://www.biggerthan-business.com/" class="footer-link">Visit Main Site</a></p>
+    </footer>
+</body>
+</html>
