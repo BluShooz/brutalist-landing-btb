@@ -74,7 +74,7 @@
         }
 
         .logo {
-            width: 80px;
+            width: 60px;
             height: auto;
         }
 
@@ -88,11 +88,19 @@
             font-size: 14px;
             border: 3px solid var(--black);
             transition: all 0.1s ease;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .nav-cta:hover {
+        .nav-cta:hover,
+        .nav-cta:focus {
             background: var(--neon-green);
             color: var(--black);
+            outline: 3px solid var(--hot-pink);
+            outline-offset: 2px;
         }
 
         /* HERO SECTION */
@@ -172,13 +180,21 @@
             border: 4px solid var(--black);
             transition: all 0.1s ease;
             box-shadow: 6px 6px 0 var(--hot-pink);
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero-cta:hover {
+        .hero-cta:hover,
+        .hero-cta:focus {
             background: var(--neon-green);
             color: var(--black);
             box-shadow: 10px 10px 0 var(--hot-pink), -4px -4px 0 var(--vivid-orange);
             transform: translate(-2px, -2px);
+            outline: 3px solid var(--white);
+            outline-offset: 2px;
         }
 
         /* HOW IT WORKS SECTION */
@@ -415,12 +431,20 @@
             box-shadow: 8px 8px 0 var(--hot-pink);
             position: relative;
             z-index: 1;
+            min-height: 52px;
+            min-width: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .final-cta-btn:hover {
+        .final-cta-btn:hover,
+        .final-cta-btn:focus {
             background: var(--bright-yellow);
             box-shadow: 12px 12px 0 var(--hot-pink), -4px -4px 0 var(--electric-blue);
             transform: translate(-4px, -4px);
+            outline: 3px solid var(--white);
+            outline-offset: 2px;
         }
 
         /* FOOTER */
@@ -443,13 +467,97 @@
             border-bottom: 2px solid var(--neon-green);
         }
 
-        .footer-link:hover {
+        .footer-link:hover,
+        .footer-link:focus {
             background: var(--neon-green);
             color: var(--black);
+            outline: 2px solid var(--white);
+            outline-offset: 2px;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 900px) {
+        /* Large tablets and small laptops */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 10vw, 100px);
+            }
+
+            .step-number {
+                font-size: 48px;
+            }
+
+            .step-text {
+                font-size: 18px;
+            }
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .logo {
+                width: 50px;
+            }
+
+            .nav-cta {
+                font-size: 12px;
+                padding: 10px 16px;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 40px 15px;
+            }
+
+            .hero-location {
+                font-size: clamp(18px, 4vw, 32px);
+                padding: 8px 20px;
+            }
+
+            .hero-sub {
+                font-size: clamp(14px, 2vw, 18px);
+            }
+
+            .hero-cta {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .how-it-works,
+            .services {
+                padding: 50px 15px;
+            }
+
+            .service-item {
+                padding: 35px 20px;
+            }
+
+            .stat {
+                padding: 50px 30px;
+            }
+
+            .final-cta {
+                padding: 80px 15px;
+            }
+
+            .final-cta-btn {
+                padding: 20px 40px;
+                font-size: 20px;
+            }
+
+            footer {
+                padding: 30px 15px;
+            }
+        }
+
+        /* Landscape phones and small tablets */
+        @media (max-width: 600px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -465,9 +573,7 @@
             .stat:nth-child(2) {
                 border-right: none;
             }
-        }
 
-        @media (max-width: 600px) {
             .steps-grid {
                 grid-template-columns: 1fr;
             }
@@ -480,12 +586,78 @@
             .step:last-child {
                 border-bottom: none;
             }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                width: 45px;
+            }
+
+            .nav-cta {
+                font-size: 11px;
+                padding: 8px 14px;
+            }
+
+            nav {
+                padding: 15px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-location {
+                padding: 6px 16px;
+                margin-bottom: 30px;
+            }
+
+            .hero-sub {
+                margin-bottom: 30px;
+            }
+
+            .hero-cta {
+                padding: 14px 28px;
+                font-size: 15px;
+                box-shadow: 4px 4px 0 var(--hot-pink);
+            }
+
+            .hero-cta:hover,
+            .hero-cta:focus {
+                box-shadow: 6px 6px 0 var(--hot-pink), -2px -2px 0 var(--vivid-orange);
+            }
+
+            .how-it-works,
+            .services {
+                padding: 40px 15px;
+            }
+
+            .section-title {
+                margin-bottom: 25px;
+            }
+
+            .step {
+                padding: 30px 20px;
+            }
+
+            .step-number {
+                font-size: 40px;
+            }
+
+            .step-text {
+                font-size: 16px;
+            }
 
             .services-grid {
                 grid-template-columns: 1fr;
             }
 
             .service-item {
+                padding: 30px 20px;
                 border-right: none;
                 border-bottom: 3px solid var(--black);
             }
@@ -494,17 +666,127 @@
                 border-bottom: none;
             }
 
+            .service-name {
+                margin-bottom: 10px;
+            }
+
+            .service-desc {
+                font-size: 13px;
+            }
+
             .stats {
                 grid-template-columns: 1fr;
             }
 
             .stat {
+                padding: 40px 20px;
                 border-right: none;
                 border-bottom: 3px solid var(--black);
             }
 
             .stat:last-child {
                 border-bottom: none;
+            }
+
+            .final-cta {
+                padding: 60px 15px;
+            }
+
+            .final-cta h2 {
+                margin-bottom: 15px;
+            }
+
+            .final-cta p {
+                margin-bottom: 30px;
+            }
+
+            .final-cta-btn {
+                padding: 18px 36px;
+                font-size: 18px;
+                box-shadow: 6px 6px 0 var(--hot-pink);
+            }
+
+            .final-cta-btn:hover,
+            .final-cta-btn:focus {
+                box-shadow: 8px 8px 0 var(--hot-pink), -3px -3px 0 var(--electric-blue);
+            }
+
+            footer {
+                padding: 25px 15px;
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 350px) {
+            .hero h1 {
+                font-size: clamp(36px, 12vw, 80px);
+            }
+
+            .hero-cta,
+            .final-cta-btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .nav-cta {
+                font-size: 10px;
+                padding: 8px 12px;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2),
+               (min-resolution: 192dpi) {
+            .hero h1,
+            .section-title {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        /* Dark mode support (system preference) */
+        @media (prefers-color-scheme: dark) {
+            /* Already dark with our color scheme, but ensure consistency */
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .hero-cta:hover,
+            .final-cta-btn:hover {
+                transform: none;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            nav,
+            .hero-cta,
+            .final-cta-btn,
+            footer {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                page-break-inside: avoid;
+            }
+
+            section {
+                page-break-inside: avoid;
             }
         }
     </style>
@@ -522,7 +804,7 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="uppercase">Walk-In Barber<br>Pflugerville</h1>
+            <h1 class="uppercase">Walk-In Barbershop<br>Pflugerville</h1>
             <p class="hero-location uppercase">Pflugerville, Texas</p>
             <p class="hero-sub">Need a haircut today? We welcome walk-ins when availability opens across our eight chairs. No appointment. No waiting. Just cuts.</p>
             <a href="https://www.biggerthan-business.com/" class="hero-cta uppercase">Book Now!</a>
@@ -606,7 +888,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p class="footer-text uppercase">© 2025 Bigger Than Business | <a href="https://www.biggerthan-business.com/" class="footer-link">Visit Main Site</a></p>
+        <p class="footer-text uppercase">© 2026 Bigger Than Business | <a href="https://www.biggerthan-business.com/" class="footer-link">Visit Main Site</a></p>
     </footer>
 </body>
 </html>
