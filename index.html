@@ -76,6 +76,38 @@
         .logo {
             width: 120px;
             height: auto;
+            display: none;
+        }
+
+        /* CSS Logo Fallback */
+        .css-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            background: var(--black);
+            border: 4px solid var(--black);
+            position: relative;
+        }
+
+        .css-logo::before {
+            content: 'BTB';
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -2px;
+        }
+
+        .css-logo::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 4px solid var(--neon-green);
+            z-index: -1;
         }
 
         .nav-cta {
@@ -501,6 +533,15 @@
                 width: 100px;
             }
 
+            .css-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .css-logo::before {
+                font-size: 36px;
+            }
+
             .nav-cta {
                 font-size: 12px;
                 padding: 10px 16px;
@@ -596,6 +637,15 @@
 
             .logo {
                 width: 90px;
+            }
+
+            .css-logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .css-logo::before {
+                font-size: 32px;
             }
 
             .nav-cta {
@@ -796,7 +846,8 @@
     <nav>
         <div class="container nav-inner">
             <!-- Alt text suggestion: Bigger Than Business Logo - Heraldic BTB shield emblem with wings and crown -->
-            <img src="https://maas-log-prod.cn-wlcb.ufileos.com/anthropic/27d36c15-bce4-4c15-aeda-c9b9200662c8/b447f3003e20eda66d51862a9a9bf48b.png?UCloudPublicKey=TOKEN_e15ba47a-d098-4fbd-9afc-a0dcf0e4e621&Expires=1772323691&Signature=67r5Hg38D8sNXiAS+IkQtvhZHwU=" alt="Bigger Than Business Logo" class="logo">
+            <div class="css-logo" title="Bigger Than Business Logo"></div>
+            <img src="images/logo.png" alt="Bigger Than Business Logo" class="logo">
             <a href="https://www.biggerthan-business.com/" class="nav-cta uppercase">Book Now!</a>
         </div>
     </nav>
